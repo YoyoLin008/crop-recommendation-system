@@ -1,43 +1,52 @@
-# team-candy-corn-sp25
-# 🌱 Crop Recommendation System
+# 🌽 Crop Recommendation System
 
-## 📖 Project Overview
-This project provides a **crop recommendation system** based on environmental factors such as **temperature, humidity, rainfall, soil pH, and nutrient levels (Nitrogen, Phosphorus, and Potassium).** Using data analysis and machine learning, the system predicts the most suitable crop for specific soil and climate conditions.
+This machine learning project provides crop recommendations based on environmental and soil characteristics across U.S. regions. Built as part of the UIUC Data Science Club, it helps farmers choose the most suitable crops using advanced modeling and clustering techniques.
 
----
+## 🚀 Project Objective
 
-## 🧠 Machine Learning Approach
+To analyze soil nutrient levels and climatic data (rainfall, temperature, humidity) and recommend optimal crops for a given region, supporting data-driven decisions in agriculture.
 
-We trained a classification model to predict the **most suitable crops** based on input features. Key components:
+## 🧠 Models & Techniques
 
-- **Model**: Random Forest Classifier (scikit-learn)
-- **Training Data**: Labeled dataset of historical soil + climate conditions and successful crops
-- **Features**: N, P, K levels, pH, soil texture, temperature, humidity, wind speed, solar radiation, etc.
-- **Output**: Top 3 crops based on probability ranking from the model
+- Random Forest
+- XGBoost (main model)
+- K-Nearest Neighbors (KNN)
+- Multi-Layer Perceptron (MLP)
+- Support Vector Machine (SVM)
+- Unsupervised clustering (K-Means) for crop grouping
 
-## 📊 Features
+## 📁 Project Structure
 
-- Top 3 crop prediction for each land sample
-- Interactive geospatial visualization using Plotly (color-coded by Top 1 crop)
-- Python Flask backend for web-based crop recommendation
+├── data/ # All datasets (raw + processed)
+├── models/ # Trained models (.pkl files)
+├── notebooks/ # Exploratory analysis and model training
+│ ├── Crop_prediction.ipynb
+│ ├── MLcomparison.ipynb
+│ └── Crop cluster.ipynb
+├── README.md
 
-## 📁 Files
 
-- `predict_top3_env_soil.py`: ML pipeline for training and prediction
-- `crop_recommender_flask.py`: Flask app for user interface/API
-- `最终整合推荐结果Top3.xlsx`: Final dataset with prediction results
+## 📊 Key Results
 
-## 🌍 Data Visualization
+- XGBoost achieved highest crop prediction accuracy.
+- Clustered crops into market-tuned categories based on shared growing conditions.
+- Built region-specific crop recommendations integrating environmental layers.
 
-Interactive map shows predicted Top1 crop per location:
-- Each point represents a land sample
-- Color-coded by Top1 recommended crop
-- Hover to see location and crop details
+## 🔧 Tech Stack
 
-## 🚀 How to Run
+- Python (Pandas, NumPy, Matplotlib)
+- Scikit-learn, XGBoost, Seaborn
+- Jupyter Notebook
+- Git, GitHub
 
-1. Install dependencies:
-   ```bash
-   pip install pandas plotly flask scikit-learn
+## 🤝 Contributors
 
-# crop-recommendation-system
+- **Yunya Lin** – [LinkedIn](https://www.linkedin.com/in/yoyo-lin-631889299/)  
+- **Tianqi Zhang**  
+- **Sujia Guo**
+
+> This project was developed collaboratively as part of the UIUC Data Science Club (IDSC) in Spring 2025.
+
+## 📜 License
+
+This project is open-source and available for academic and educational use.
